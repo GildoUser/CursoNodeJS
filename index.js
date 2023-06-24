@@ -1,4 +1,4 @@
-const { Person } = require("./person");
+//const { Person } = require("./person");
 //require("./anotacoes/Nodejs");
 // require("./modules/path.js");
 //require("./modules/http");
@@ -6,13 +6,13 @@ const { Person } = require("./person");
 //require("./modules/express");
 //const person = new Person("Gil")
 //console.log(person.sayMyName());
-function inicializaRequires() {
+//function inicializaRequires() {
   //require("./PrivateComments/promisses");
-  require("./modules/express");
-}
+ // require("./modules/express");
+//}
 function inicializar() {
   console.log("Index.js Rodando");
-  inicializaRequires();
+  //inicializaRequires();
 }
 inicializar();
 // let cat = Object.create({type: ""})
