@@ -52,23 +52,24 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 // Função que se torna uma promisse - É basicamente o mesmo cenário, porém
-const betterDeveloper = "Gil";
-// Na segunda linha escrita do código, iremos usar um >> return new Promise cujo chaves{esqueleto} envolve as decisões
-function whoIsBetterCallback(callback, erroCallback) {
-  // é preciso passar resolve e reject quando for chamar a callback da promisse
-  return new Promise((resolve, reject) => {
-    if (betterDeveloper != "Gil") {
-      resolve({ name: "Não é meu nome \n", message: "Digite novamente!" });
-    } else {
-      reject({ name: "É o meu nome!!\n", message: "E ai meu chapa!" });
-    }
-  });
-}
+// const betterDeveloper = "Gil";
+// // Na segunda linha escrita do código, iremos usar um >> return new Promise cujo chaves{esqueleto} envolve as decisões
+// function whoIsBetterCallback(callback, erroCallback) {
+//   // é preciso passar resolve e reject quando for chamar a callback da promisse
+//   return new Promise((resolve, reject) => {
+//     if (betterDeveloper != "Gil") {
+//       resolve({ name: "Não é meu nome \n", message: "Digite novamente!" });
+//     } else {
+//       reject({ name: "É o meu nome!!\n", message: "E ai meu chapa!" });
+//     }
+//   });
+// }
 
-whoIsBetterCallback()
-  .then((result) => {
-    console.log(result.name + " saidaqui " + result.message);
-  })
-  .catch((error) => {
-    console.log(error.name, error.message);
-  });
+// whoIsBetterCallback()
+//   .then((result) => {
+//     console.log(result.name + " saidaqui " + result.message);
+//   })
+//   .catch((error) => {
+//     console.log(error.name, error.message);
+//   });
+
