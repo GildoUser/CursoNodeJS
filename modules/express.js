@@ -24,6 +24,6 @@ app.get("/users", (req, res) => {
   res.status(200).send(JSON.stringify(users));
 });
 
-const port = 8080;
+const port = 3000;
 
 app.listen(port, () => console.log(`Rodando com express na porta: ${port}`));
