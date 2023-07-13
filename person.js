@@ -1,13 +1,27 @@
-class Person {
-  constructor(name) {
+class Pessoa {
+  constructor(name, cpf, votePresi, voteGov) {
     this.name = name;
+    this.cpf = cpf;
+    this.votePresi = votePresi;
+    this.voteGov = voteGov;
   }
 
   sayMyName() {
-    return `My name is ${this.name}!`;
+    console.log(`Meu nome é ${this.name}`);
+  }
+
+  tranformToJson() {
+    let conveterPessoa = {
+      name: this.name,
+      cpf: this.cpf,
+      votePresi: this.votePresi,
+      voteGov: this.voteGov,
+    };
+
+    return conveterPessoa;
   }
 }
 
 module.exports = {
-  Person,
+  Pessoa,
 };

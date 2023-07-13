@@ -1,29 +1,23 @@
 const express = require("express");
-
-// requisição get
+const cors = require("cors");
+const { Pessoa } = require("../person");
 const app = express();
-
+app.use(express.json());
+app.use(cors());
 app.get("/home", (req, res) => {
-  //adicionar o content-type
+  console.log("Entrando");
   res.contentType("text/html");
   res.status(200).send("<h1>hello world</h1>");
 });
 
-app.get("/users", (req, res) => {
-  const users = [
-    {
-      name: "John Doe",
-      email: "john@doe.com",
-    },
-    {
-      name: "Jane Doe",
-      email: "jane@doe.com",
-    },
-  ];
-  res.contentType("application/json");
-  res.status(200).send(JSON.stringify(users));
+app.post("/sendjson", (req, res) => {
+  teste = req.body;
+  console.log(teste);
+
+  res.contentType("text/html");
+  res.status(200).send("Dados recebidos com sucesso");
 });
 
 const port = 8080;
 
-app.listen(port, () => console.log(`Rodando com express na porta: ${port}`));
+app.listen(port, () => console.log("Servidor rodando na porta: ", port));
